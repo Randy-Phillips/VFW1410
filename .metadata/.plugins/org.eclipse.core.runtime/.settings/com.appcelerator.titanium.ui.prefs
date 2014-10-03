@@ -1,7 +1,13 @@
 =run
-LAST_LAUNCH_TIMESTAMP=1412201634935
+LAST_LAUNCH_TIMESTAMP=1412373728857
 eclipse.preferences.version=1
+phillips_randy_project1\:launchMode=run
+phillips_randy_project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut.bf1547d3
 preference.show.console.onError=true
 preference.studio.perspective.version=103
+rPhillips_Project11\:launchMode=run
+rPhillips_Project11\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch)
+rPhillips_Project12\:launchMode=run
+rPhillips_Project12\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
 rPhillips_Project1\:launchMode=run
-rPhillips_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.run.device.launchShortcut.all
+rPhillips_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.iPad Retina

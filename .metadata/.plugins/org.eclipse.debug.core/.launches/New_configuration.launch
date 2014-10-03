@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.android.packager.launchConfigurationType">
+<booleanAttribute key="ATTR_MINIFY" value="true"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value=""/>
+<stringAttribute key="abi" value="armeabi-v7a"/>
+<stringAttribute key="key_password" value=""/>
+<stringAttribute key="keystore_alias" value=""/>
+<stringAttribute key="keystore_password" value=""/>
+<stringAttribute key="keystore_path" value=""/>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<stringAttribute key="process_factory_id" value="com.appcelerator.titanium.mobile.ui.androidLogLevelFilteringProcessFactory"/>
+<booleanAttribute key="publish_acs" value="false"/>
+<stringAttribute key="sdk_version" value="4.1.2"/>
+</launchConfiguration>

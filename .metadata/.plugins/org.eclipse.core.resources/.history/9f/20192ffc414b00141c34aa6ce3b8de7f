@@ -1,0 +1,61 @@
+Ti.UI.setBackgroundColor("#000");
+
+var color1 = "466675";
+var color2 = "6A8D9D";
+var color3 = "CCCCCC";
+
+var margin = 20;
+
+var mainWindow = Ti.UI.createWindow({
+	// Reserved Properties
+	backgroundColor: "#fff",
+	backgroundImage: "bgimg.png",
+	backgroundRepeat: true,
+	
+});
+
+var firstView = Ti.UI.createView({
+	backgroundColor: color2,
+	//borderRadius: 5,
+	//borderWidth: 1,
+	height: 20,
+	top: margin,
+	width: "95%",
+	height: 90,
+	zIndex: 1,
+});
+
+var secondView = Ti.UI.createView({
+	backgroundColor: color3,
+	width: "95%",
+	top: 20,
+	zIndex: 0,
+	bottom: 5,
+});
+
+var thirdView = Ti.UI.createView({
+	backgroundColor: color1,
+	width: "91%",
+	top: firstView.height + margin + 6,
+	zIndex: 3,
+	bottom: 15,
+});
+
+var nextView = Ti.UI.createView({
+	backgroundColor: "black",
+	height: 40,
+	width: 120,
+	top:400,
+	right:50,
+	zIndex:5,
+	
+});
+
+
+mainWindow.add(firstView, secondView, thirdView, nextView);
+
+mainWindow.open();
+
+
+
+
