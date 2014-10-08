@@ -2460,3 +2460,112 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/attackru
 
 !ENTRY org.eclipse.osgi 2 1 2014-10-03 18:02:08.457
 !MESSAGE NLS missing message: LaunchAppToolbarContribution_NoSelectedProjects in: com.appcelerator.titanium.ui.messages
+
+!ENTRY org.eclipse.core.resources 4 271 2014-10-08 19:22:03.630
+!MESSAGE Errors occurred while refreshing resources with the local file system.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2014-10-08 19:22:03.630
+!MESSAGE The project description file (.project) for 'phillips_randy_project2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY com.aptana.index.core 4 0 2014-10-08 19:22:03.742
+!MESSAGE (Build 3.3.0.201407100905) [ERROR]  Size of category 'js.function' negative:
+-------------------- DEBUG --------------------
+file = /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/37496388.index
+offset = 2917
+size = -1
+--------------------   END   --------------------
+
+
+!ENTRY com.aptana.index.core 4 0 2014-10-08 19:22:03.743
+!MESSAGE (Build 3.3.0.201407100905) [ERROR]  Size of category 'js.type' negative:
+-------------------- DEBUG --------------------
+file = /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/37496388.index
+offset = 3303
+size = -1
+--------------------   END   --------------------
+
+
+!ENTRY com.aptana.index.core 4 0 2014-10-08 19:22:03.746
+!MESSAGE (Build 3.3.0.201407100905) [ERROR]  /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/2603972606.index (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/2603972606.index (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1001)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.aptana.index.core 4 0 2014-10-08 19:22:10.916
+!MESSAGE (Build 3.3.0.201407100905) [ERROR]  /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/2603972606.index (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/2603972606.index (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1001)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.aptana.index.core 4 0 2014-10-08 19:22:11.307
+!MESSAGE (Build 3.3.0.201407100905) [ERROR]  Index error in readCategoryTable. 
+file = /Users/attackruby/Documents/FSO/Visual Frameworks/VFW1410/.metadata/.plugins/com.aptana.index.core/1521141896.index 
+offset = 139 
+ size = 1,633,838,444
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategory(DiskIndex.java:795)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategories(DiskIndex.java:768)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:929)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
