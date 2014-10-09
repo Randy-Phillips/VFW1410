@@ -1,0 +1,20 @@
+
+var arrayTest = [{title: "one"}, {title: "two"}, {title: "three"}, {title: "four"} ];
+
+var newTable = Ti.UI.createTableView({
+	data: arrayTest,
+	top: topName.height + topName.top,
+	zIndex:10,
+	left: 10,
+	right: 10,
+});
+
+if(Ti.Platform.name === "iPhone OS"){
+	newTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+}
+
+newTable.setData(arrayTest);
+
+mainWin.add(newTable);
+
+//buttonView.addEventListener("click", displayItems);
