@@ -1,0 +1,9 @@
+
+var arrayTest = [{title: "one"}, {title: "two"}, {title: "three"}, {title: "four"} ];
+
+var newTable = Ti.UI.createTableView({
+	data: arrayTest,
+	top: topName.height + topName.top,
+	zIndex:10
+});
+// buttonView.addEventListener("click", displayItems);
