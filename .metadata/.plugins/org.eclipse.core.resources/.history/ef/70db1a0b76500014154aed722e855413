@@ -1,0 +1,64 @@
+
+var androidList = [
+	{title: "Galaxy Note 4", description: "", specs:""}, 
+	{title: "Moto X \(2014\)", description: "", specs:""},
+	{title: "HTC One M8", description: "", specs:""}, 
+	{title: "LG G3", description: "", specs:""} 
+];
+
+
+
+var iphoneList = [
+	{title: "iPhone 6 Plus", description: "", specs:""}, 
+	{title: "iPhone 6", description: "", specs:""}, 
+	{title: "iPhone 5s", description: "", specs:""}, 
+	{title: "iPhone 5c", description: "", specs:""} ];
+
+
+
+
+
+var newTable = Ti.UI.createTableView({
+	data: androidList,
+	top: topName.height + topName.top,
+	zIndex:10,
+	left: 10,
+	right: 10,
+});
+
+if(Ti.Platform.name === "iPhone OS"){
+	newTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+}
+
+var androidSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Android Phones",
+	footerTItle: "Latest Android Phones",
+});
+
+var iphoneSection = Ti.UI.createTableViewSection ({
+	headerTitle: "iPhones",
+	footerTItle: "Latest iPhones",
+});
+
+for (var i=0, j=androidList.length; i<j; i++) {
+	var theRow = Ti.UI.createTableViewRow({
+		title: androidList[i].title
+	});
+	androidSection.add(theRow);
+}
+
+for (var i=0, j=iphoneList.length; i<j; i++) {
+	var theRow2 = Ti.UI.createTableViewRow({
+		title: iphoneList[i].title
+	});
+	iphoneSection.add(theRow2);
+}
+
+
+var phoneSections = [androidSection, iphoneSection];
+
+newTable.setData(phoneSections);
+
+mainWin.add(newTable);
+
+//buttonView.addEventListener("click", displayItems);

@@ -2,22 +2,40 @@
 Titanium.UI.setBackgroundColor('#000');
 
 
-// Main Window
 
-
+//
+// mainWindow
+//
 var mainWin = Titanium.UI.createWindow({  
     title: "mainWindow",
     backgroundColor:"#fff"
     
 });
 
+
+
 var mainLabel = Titanium.UI.createLabel({
-	color:"525252",
-	text:"List of Phones",
+	color:"#999",
+	text:"I am Window 1",
 	font:{fontSize:20,fontFamily:"Helvetica Neue"},
 	textAlign: "center",
 	width: "auto"
 });
+
+mainWin.add(mainLabel);
+
+//
+// create controls tab and root window
+//
+var secondWindow = Titanium.UI.createWindow({  
+    title:"secondWindow",
+    backgroundColor: "#C4C4C4",
+    top: 5
+    
+});
+
+
+
 
 var topName = Ti.UI.createView ({
 	backgroundColor: "#C4C4C4",
@@ -42,9 +60,7 @@ var loadFile = require('content');
 
 
 mainWin.open();
-topName.add(mainLabel);
-mainWin.add(mainView,topName);
-
+mainWin.add(mainLabel,mainView,topName);
 
 
 
