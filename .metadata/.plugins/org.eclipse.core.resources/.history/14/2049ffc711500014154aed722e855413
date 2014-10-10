@@ -1,0 +1,40 @@
+
+var androidList = [{title: "one"}, {title: "two"}, {title: "three"}, {title: "four"} ];
+
+var newTable = Ti.UI.createTableView({
+	data: arrayTest,
+	top: topName.height + topName.top,
+	zIndex:10,
+	left: 10,
+	right: 10,
+});
+
+if(Ti.Platform.name === "iPhone OS"){
+	newTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+}
+
+var androidSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Android Phones",
+	footerTItle: "Latest Android Phones",
+});
+
+var iphoneSection = Ti.UI.createTableViewSection ({
+	headerTitle: "iPhones",
+	footerTItle: "Latest iPhones",
+});
+
+for (var i=0, j=androidList.length; i<j; i++) {
+	var theRow = Ti.UI.createTableViewRow({
+		title: androidList[i].title
+	});
+	androidSection.add(theRow);
+}
+
+
+var phoneSections = [androidSection, iphoneSection];
+
+newTable.setData(phoneSections);
+
+mainWin.add(newTable);
+
+//buttonView.addEventListener("click", displayItems);
