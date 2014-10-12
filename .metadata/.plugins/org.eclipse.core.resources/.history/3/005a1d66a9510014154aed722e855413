@@ -43,8 +43,7 @@ if(Ti.Platform.name === "iPhone OS"){
 	newTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
 }
 
-// Sections Created for header and footer
-
+// Sections Created 
 var androidSection = Ti.UI.createTableViewSection ({
 	headerTitle: "Android Phones",
 	footerTitle: "Latest Android Phones",
@@ -55,7 +54,6 @@ var iphoneSection = Ti.UI.createTableViewSection ({
 	footerTitle: "Latest iPhones",
 });
 
-// Logic for my Description and Specs Window (Second Window)
 
 var myDetails = function(){
 	var detailWindow = Ti.UI.createWindow({
@@ -133,8 +131,6 @@ detailWindow.add(detailView,detailTopName,detailText,specText, closeButton);
 myNav.openWindow(detailWindow);
 
 };
-
-// Data created and separated from JSON Data to use in rows and desc. page
 
 for (var i=0, j=androidList.length; i<j; i++) {
 	var androidRow = Ti.UI.createTableViewRow({
