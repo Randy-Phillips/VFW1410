@@ -128,7 +128,7 @@ for (var i=0, j=androidList.length; i<j; i++) {
 	var androidRow = Ti.UI.createTableViewRow({
 		title: androidList[i].title,
 		desc: androidList[i].description,
-		specs: "Screen Size: " + androidList[i].specs + " inches.",
+		specs: "Screen Size: " + androidList[i].specs + "inches.",
 		hasChild: true
 	});
 	androidSection.add(androidRow);
@@ -139,7 +139,7 @@ for (var i=0, j=iphoneList.length; i<j; i++) {
 	var iphoneRow = Ti.UI.createTableViewRow({
 		title: iphoneList[i].title,
 		desc: iphoneList[i].description,
-		specs: "Screen Size: " + iphoneList[i].specs + " inches.",
+		specs: iphoneList[i].specs,
 		hasChild: true
 	});
 	
