@@ -6,7 +6,7 @@ Titanium.UI.setBackgroundColor('#000');
 
 
 var mainWin = Titanium.UI.createWindow({  
-    title: "mainWindow",
+    title: "Phone List",
     backgroundColor:"#fff"
     
 });
@@ -41,7 +41,7 @@ var mainView = Ti.UI.createView ({
 var loadFile = require('content');
 
 
-mainWin.open();
+
 topName.add(mainLabel);
 mainWin.add(mainView,topName);
 

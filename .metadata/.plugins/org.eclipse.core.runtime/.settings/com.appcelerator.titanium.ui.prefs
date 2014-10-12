@@ -2,7 +2,7 @@
 LAST_LAUNCH_TIMESTAMP=1412886992450
 eclipse.preferences.version=1
 phillips_randy_project1\:launchMode=run
-phillips_randy_project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
+phillips_randy_project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch)
 phillips_randy_project2\:launchMode=run
 phillips_randy_project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch)
 preference.show.console.onError=true

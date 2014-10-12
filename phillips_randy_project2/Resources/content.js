@@ -1,6 +1,7 @@
 
+
 var androidList = [
-	{title: "Galaxy Note 4", description: "this is the galaxy note 4", specs:"5.8 inch display"}, 
+	{title: "Galaxy Note 4", description: "adawdwas", specs:"5.8 inch display"}, 
 	{title: "Moto X \(2014\)", description: "this is the moto x", specs:"4.7 inch display"},
 	{title: "HTC One M8", description: "this is the htc one m8", specs:"5.5 inch dplay"}, 
 	{title: "LG G3", description: "this is the lgg3", specs:"5.6 inch display"} 
@@ -16,7 +17,11 @@ var iphoneList = [
 ];
 
 
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
 
+myNav.open();
 
 
 var newTable = Ti.UI.createTableView({
@@ -44,6 +49,7 @@ var iphoneSection = Ti.UI.createTableViewSection ({
 
 var myDetails = function(){
 	var detailWindow = Ti.UI.createWindow({
+		title: this.title,
 		backgroundColor: "f5f5f5"
 		
 	});
@@ -74,16 +80,47 @@ var myDetails = function(){
 		zIndex: 1
 });
 
-detailTopName.add(detailLabel);
-detailWindow.add(detailView,detailTopName);
+var detailText = Ti.UI.createLabel({
+	text: this.desc,
+	font:{fontSize:16,fontFamily:"Arial"},
+	top: detailTopName.height + detailTopName.top + 40,
+	left: 10,
+	right: 10,
+	zIndex: 10
+});	
 
-detailWindow.open();
+
+var closeButton = Ti.UI.createLabel({
+	text: "Go Back",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	font:{fontSize:12,fontFamily:"Arial"},
+	width: "100%",
+	bottom: 0,
+	textAlign: "center",
+	zIndex: 8
+});
+
+var closeWindow = function() {
+	detailWindow.close();
+};
+
+
+closeButton.addEventListener("click", closeWindow);
+
+detailTopName.add(detailLabel);
+detailWindow.add(detailView,detailTopName,detailText, closeButton);
+
+myNav.openWindow(detailWindow);
 
 };
 
 for (var i=0, j=androidList.length; i<j; i++) {
 	var androidRow = Ti.UI.createTableViewRow({
 		title: androidList[i].title,
+		desc: androidList[i].description,
+		specs: androidList[i].specs,
 		hasChild: true
 	});
 	androidSection.add(androidRow);
@@ -93,6 +130,8 @@ for (var i=0, j=androidList.length; i<j; i++) {
 for (var i=0, j=iphoneList.length; i<j; i++) {
 	var iphoneRow = Ti.UI.createTableViewRow({
 		title: iphoneList[i].title,
+		desc: iphoneList[i].description,
+		specs: iphoneList[i].specs,
 		hasChild: true
 	});
 	
@@ -107,5 +146,6 @@ var phoneSections = [androidSection, iphoneSection];
 newTable.setData(phoneSections);
 
 mainWin.add(newTable);
+
 
 //buttonView.addEventListener("click", displayItems);
