@@ -12,6 +12,11 @@ var imageFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "image
 var imageFiles = imageFolder.getDirectoryListing();
 
 
+
+var image = Ti.UI.createImageView ({
+	image: "",
+});
+
 // Navigation Window Created
 
 var myNav = Ti.UI.iOS.createNavigationWindow({
@@ -58,15 +63,6 @@ var openImage = function(){
 		image: this.image,
 		//title: this.imageFile[i],
 	});
-	
-	var bigLabel = Titanium.UI.createLabel({
-	color:"black",
-	text:this.desc,
-	font:{fontSize:20,fontFamily:"Helvetica Neue"},
-	textAlign: "center",
-	width: "auto",
-	bottom: 0
-});
 
 
 var goBack = Ti.UI.createLabel({
@@ -85,7 +81,7 @@ var closeImageWin = function() {
 	imageWin.close();
 };
 
-bigView.add(bigImage,bigLabel);
+bigView.add(bigImage);
 imageWin.add(bigView,goBack);
 myNav.openWindow(imageWin);
 
@@ -118,7 +114,6 @@ for(var i=0; i < imageFiles.length; i++ ) {
 	var thumb = Ti.UI.createImageView({
 		image: "images/" + imageFiles[i],
 		title: imageFiles[i],
-		desc: imageFiles[i],
 		width: imageBox.width * 2,
 		top: 0
 	});

@@ -64,8 +64,7 @@ var openImage = function(){
 	text:this.desc,
 	font:{fontSize:20,fontFamily:"Helvetica Neue"},
 	textAlign: "center",
-	width: "auto",
-	bottom: 0
+	width: "auto"
 });
 
 
@@ -85,7 +84,7 @@ var closeImageWin = function() {
 	imageWin.close();
 };
 
-bigView.add(bigImage,bigLabel);
+bigView.add(bigImage);
 imageWin.add(bigView,goBack);
 myNav.openWindow(imageWin);
 

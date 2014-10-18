@@ -65,7 +65,7 @@ var openImage = function(){
 	font:{fontSize:20,fontFamily:"Helvetica Neue"},
 	textAlign: "center",
 	width: "auto",
-	bottom: 0
+	bottom: 100
 });
 
 
