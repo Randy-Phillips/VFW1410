@@ -1,0 +1,53 @@
+
+Titanium.UI.setBackgroundColor('#000');
+
+
+// Main Window
+
+
+var mainWin = Titanium.UI.createWindow({  
+    title: "TITLE",
+    backgroundColor:"#fff"
+    
+});
+
+var mainLabel = Titanium.UI.createLabel({
+	color:"525252",
+	text:"Open Gallery",
+	font:{fontSize:20,fontFamily:"Helvetica Neue"},
+	textAlign: "center",
+	width: "auto"
+});
+
+var topName = Ti.UI.createView ({
+	backgroundColor: "red",
+	top: 1,
+	right:0,
+	left: 5,
+	height: 85,
+	zIndex: 2,
+});
+
+var mainView = Ti.UI.createView ({
+	backgroundColor: "4A4A4A",
+	borderColor: "black",
+	border: 10,
+	borderRadius: 1000,
+	//top: 20,
+	//right: 10,
+	//left: 10,
+	//bottom: 10,
+	zIndex: 1,
+});
+
+
+var loadFile = require('content');
+
+
+
+topName.add(mainLabel);
+mainWin.add(mainView,topName);
+
+
+
+

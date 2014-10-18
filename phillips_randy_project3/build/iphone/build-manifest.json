@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "iphone",
+	"iosSdkPath": "/Users/attackruby/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "787cd39",
+	"name": "phillips_randy_project33",
+	"id": "com.attackruby.project3",
+	"analytics": true,
+	"publisher": "attackruby",
+	"url": "http://",
+	"version": "1.0",
+	"description": "",
+	"copyright": "2014 by attackruby",
+	"guid": "68a5229e-aaa1-423c-a26e-a695f7bc81fe",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}
