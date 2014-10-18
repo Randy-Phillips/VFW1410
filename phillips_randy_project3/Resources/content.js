@@ -1,4 +1,5 @@
 
+
 var pWidth = Ti.Platform.displayCaps.platformWidth;
 var pHeight = Ti.Platform.displayCaps.platformHeight;
 var itemCount = 25;
@@ -7,6 +8,14 @@ var margin = 10;
 var truecanvasWidth = pWidth - (margin * rowCount) - margin;
 var size = truecanvasWidth / rowCount ;
 
+var imageFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imageFolder.getDirectoryListing();
+
+
+
+var image = Ti.UI.createImageView ({
+	image: "",
+});
 
 // Navigation Window Created
 
@@ -44,20 +53,24 @@ var viewContainer = Ti.UI.createScrollView({
 
 // For Loop to add Gallery Boxes
 
-for(var i=0; i < itemCount; i++ ) {
-	var view = Ti.UI.createView({
+for(var i=0; i < imageFiles.length; i++ ) {
+	var imageBox = Ti.UI.createView({
 		backgroundColor: "#33ccff",
-		top: margin,
-		left: margin,
+		top: 10,
+		left: 10,
 		width: size,
 		height: size
 	});
-	var text = Ti.UI.createLabel({
-		text: i+1, 
-		color: "#fff"
-		});
-	view.add(text);
-	viewContainer.add(view);
+	
+	var thumb = Ti.UI.createImageView({
+		image: "images/" + imageFiles[i],
+		width: imageBox.width + 7,
+		top: 0
+	});
+	
+	
+	imageBox.add(thumb);
+	viewContainer.add(imageBox);
 		
 };
 
