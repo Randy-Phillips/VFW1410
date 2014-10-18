@@ -30,28 +30,77 @@ myNav.open();
 
 var galleryWin = Titanium.UI.createWindow({  
     title: "Gallery",
-    backgroundColor:"#fff",
+    backgroundColor:"8A8A8A",
     //layout: "horizontal"
     
 });
 
 var border = Ti.UI.createView({
-	backgroundColor: "#cecece",
+	backgroundColor: "#8A8A8A",
 	height: 1,
 	width: pWidth,
 	top: 20,
 });
 
-var viewContainer = Ti.UI.createScrollView({
-	width: pWidth,
-	backgroundColor: "#fef",
-	layout: "horizontal",
-	contentWidth: pWidth,
-	top: 0
+
+// Big Image Function
+
+var openImage = function(){
+	
+	var imageWin = Ti.UI.createWindow ({
+		title:  this.title,
+		backgroundColor: "8A8A8A",
+	});
+	
+	var bigView = Ti.UI.createView ({
+		backgroundColor: "transparent",
+		top: 20,
+		right: 5,
+		left: 5,
+		bottom: 90
+	});
+	var bigImage = Ti.UI.createImageView ({
+		image: this.image,
+		//title: this.imageFile[i],
+	});
+
+
+var goBack = Ti.UI.createLabel({
+	text: "Go Back",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	font:{fontSize:12,fontFamily:"Arial"},
+	width: "100%",
+	bottom: 0,
+	textAlign: "center",
+	zIndex: 8
 });
 
+var closeImageWin = function() {
+	imageWin.close();
+};
+
+bigView.add(bigImage);
+imageWin.add(bigView,goBack);
+myNav.openWindow(imageWin);
+
+goBack.addEventListener("click", closeImageWin);
+
+};
 
 // For Loop to add Gallery Boxes
+
+
+var viewContainer = Ti.UI.createScrollView({
+	width: pWidth,
+	backgroundColor: "8A8A8A",
+	layout: "horizontal",
+	contentWidth: pWidth,
+	top: 0,
+	height: pHeight-border.top-border.height - 91,
+	showVerticalScrollIndicator: true
+});
 
 for(var i=0; i < imageFiles.length; i++ ) {
 	var imageBox = Ti.UI.createView({
@@ -64,11 +113,13 @@ for(var i=0; i < imageFiles.length; i++ ) {
 	
 	var thumb = Ti.UI.createImageView({
 		image: "images/" + imageFiles[i],
-		width: imageBox.width + 7,
+		title: imageFiles[i],
+		width: imageBox.width * 2,
 		top: 0
 	});
 	
-	
+	//imageBox.addEventListener("click", openImage);
+    thumb.addEventListener("click", openImage);
 	imageBox.add(thumb);
 	viewContainer.add(imageBox);
 		
@@ -77,6 +128,26 @@ for(var i=0; i < imageFiles.length; i++ ) {
 galleryWin.add(border, viewContainer);
 
 
+var closeButton = Ti.UI.createLabel({
+	text: "Go Back",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	font:{fontSize:12,fontFamily:"Arial"},
+	width: "100%",
+	bottom: 0,
+	textAlign: "center",
+	zIndex: 8
+});
+
+var closeWindow = function() {
+	galleryWin.close();
+};
+
+
+closeButton.addEventListener("click", closeWindow);
+
+galleryWin.add(closeButton);
 
 
 var newWindow = function(){
@@ -84,3 +155,8 @@ var newWindow = function(){
 };
 
 topName.addEventListener("click", newWindow);
+
+
+
+
+
