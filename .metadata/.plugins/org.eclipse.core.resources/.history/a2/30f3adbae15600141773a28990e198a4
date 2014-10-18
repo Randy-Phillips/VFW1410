@@ -1,0 +1,26 @@
+
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var itemCount = 15;
+var rowCount = 3;
+var margin = 10;
+var truecanvasWidth = pWidth - (margin * rowCount) - margin;
+var size = truecanvasWidth / rowCount ;
+
+
+// Navigation Window Created
+
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+myNav.open();
+
+var newFunction = function() {
+	console.log(truecanvasWidth);
+	console.log(rowCount);
+	console.log(size);
+
+};
+
+topName.addEventListener("click", newFunction);

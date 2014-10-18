@@ -1,0 +1,48 @@
+
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var itemCount = 15;
+var rowCount = 3;
+var margin = 10;
+var truecanvasWidth = pWidth - (margin * rowCount) - margin;
+var size = truecanvasWidth / rowCount ;
+
+
+// Navigation Window Created
+
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+myNav.open();
+
+
+
+for(var i=0; i < itemCount; i++ ) {
+	var view = Ti.UI.createView({
+		backgroundColor: "#33ccff",
+		top: margin,
+		width: size,
+		height: size
+	});
+	var text = Ti.UI.createLable({
+		text: i+1, 
+		color: "#fff"
+		});
+
+};
+
+
+
+
+var galleryWin = Titanium.UI.createWindow({  
+    title: "Gallery",
+    backgroundColor:"#fff"
+    
+});
+
+var newWindow = function(){
+	myNav.window = galleryWin;
+};
+
+topName.addEventListener("click", newWindow);

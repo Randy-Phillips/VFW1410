@@ -6,7 +6,7 @@ Titanium.UI.setBackgroundColor('#000');
 
 
 var mainWin = Titanium.UI.createWindow({  
-    title: "TITLE",
+    title: "Main Application",
     backgroundColor:"#fff"
     
 });
