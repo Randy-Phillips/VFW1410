@@ -109,10 +109,14 @@ var viewContainer = Ti.UI.createScrollView({
 for(var i=0; i < imageFiles.length; i++ ) {
 	var imageBox = Ti.UI.createView({
 		backgroundColor: "#33ccff",
+		borderColor: "black",
+		border: 3,
+		borderRadius: 0,
 		top: 10,
 		left: 10,
 		width: size,
-		height: size
+		height: size,
+		
 	});
 	
 	var thumb = Ti.UI.createImageView({
