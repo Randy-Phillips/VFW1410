@@ -1,4 +1,4 @@
-var myText = ["Lets Count to 5 Please", "One", "Two", "Three", "Four", "Five", "We have counted to five, the end!"];
+var myText = ["Lets Count to 5 Please", "One", "Two", "Three", "Four", "Five", "We Have counted to five, the end!"];
 var i = 0;
 var x = myText.length - 1;
 
@@ -14,10 +14,10 @@ var textLabel = Titanium.UI.createLabel({
 var nextText = function() {
 	if (i < x) {
 		i = i + 1;
-		textLabel.text = myText[i];
+		mainLabel.text = myText[i];
 	} else {
 		i = 0;
-		textLabel.text = myText[i];
+		mainLabel.text = myText[i];
 	};
 };
 
@@ -25,10 +25,10 @@ var nextText = function() {
 var prevText = function() {
 	if (i > 0) {
 		i = i - 1;
-		textLabel.text = myText[i];
+		mainLabel.text = myText[i];
 	} else {
 		i = x;
-		textLabel.text = myText[i];
+		mainLabel.text = myText[i];
 	};
 };
 

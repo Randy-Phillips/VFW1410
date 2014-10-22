@@ -1,4 +1,4 @@
-var myText = ["Lets Count to 5 Please", "One", "Two", "Three", "Four", "Five", "We have counted to five, the end!"];
+var myText = ["Lets Count to 5 Please", "One", "Two", "Three", "Four", "Five", "We Have counted to five, the end!"];
 var i = 0;
 var x = myText.length - 1;
 
