@@ -1,0 +1,25 @@
+var myText = ["hello", "world", "last"];
+
+
+
+
+
+var enterText = function() {
+	var b = fieldText.text;
+	var i = myText.indexOf[b];
+	
+	if (i <  myText.length) {
+	var i = i ++;
+	fieldText.text = myText[i];
+	}
+	
+
+	
+
+};
+	
+	
+nextButton.addEventListener("click", enterText);
+
+
+textField.add(fieldText);

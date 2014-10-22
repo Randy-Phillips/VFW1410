@@ -1,0 +1,26 @@
+var myText = ["hello", "world", "last"];
+var i = 0;
+
+
+var mainLabel = Titanium.UI.createLabel({
+	color:"black",
+	text: myText[i],
+	font:{fontSize:20,fontFamily:"Helvetica Neue"},
+	textAlign: "center",
+	width: "auto"
+});
+
+
+var enterText = function() {
+	if (i < myText.length) {
+		i = i++;
+		mainLabel = myText[i];
+	};
+};
+
+textField.add(mainLabel);
+	
+nextButton.addEventListener("click", enterText);
+
+
+

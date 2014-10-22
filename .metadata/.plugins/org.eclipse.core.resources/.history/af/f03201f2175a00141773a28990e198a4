@@ -1,0 +1,28 @@
+var myText = ["hello", "world", "last"];
+
+
+
+var fieldText = Ti.UI.createLabel({
+	color:"black",
+	text: myText[0] ,
+	font:{fontSize:24,fontFamily:"Helvetica Neue"},
+	textAlign: "center",
+	width: "auto"
+});
+
+var enterText = function() {
+	var i = fieldText.text;
+	var indexNum = myText.indexOf(i);
+	var textLength = myText.lengt;
+	if ( i !== myText[textLength] ) {
+		indexNum = indexNum++;
+		fieldText.text = myText[indexNum];
+	} else { 
+		fieldText.text = myText = 0;
+		};
+	};
+	
+nextButton.addEventListener("click", enterText);
+
+
+textField.add(fieldText);

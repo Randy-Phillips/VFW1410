@@ -1,0 +1,38 @@
+
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#fff",
+	
+});
+
+
+var backDrop = Ti.UI.createView({
+	backgroundColor:"ffffff",
+	top: 20,
+});
+
+var textField = Ti.UI.createView({
+	
+});
+
+var nextButton = Ti.UI.createView({
+	backgroundColor: "FFD754",
+	width: 120,
+	height: 40,
+	left: 10,
+	bottom: 30
+	
+	
+});
+
+var backButton = Ti.UI.createView({
+	backgroundColor: "FFD754",
+	width: 120,
+	height: 40,
+	right: 10,
+	bottom: 30
+});
+
+mainWindow.add(backDrop,nextButton,backButton);
+mainWindow.open();
+
