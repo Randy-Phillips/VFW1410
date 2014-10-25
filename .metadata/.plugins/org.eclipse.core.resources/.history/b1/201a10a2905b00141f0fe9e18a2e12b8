@@ -1,0 +1,16 @@
+//alert("gallery");
+
+var currentWindow = Ti.UI.currentWindow;
+
+var imageBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:40,
+	right:15,
+	left: 15,
+	bottom:40
+	
+});
+
+currentWindow.add(imageBlock);
+
+

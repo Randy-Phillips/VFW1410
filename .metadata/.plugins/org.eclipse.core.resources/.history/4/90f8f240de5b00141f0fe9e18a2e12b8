@@ -1,0 +1,57 @@
+//alert("data");
+
+var currentWindow = Ti.UI.currentWindow;
+
+var androidList = [
+	{title: "Galaxy Note 4", description: "The Galaxy Note 4 is Samsung Flagship device typically released in 4th quarter. The original Galaxy note was the start of it all when it comes to big screen sizes.", specs:"5.7"}, 
+	{title: "Moto X \(2014\)", description: "the Moto X \(2014\) is the second version of the Moto X. With Moto Maker and the ability to customize the phone to fit you appeals to anyone and creates a unique device build for you.", specs:"5.2"},
+	{title: "HTC One M8", description: "HTC One M8 is the leading phone with the highest quality speakers. With the dual front facing speakers, it creates a great listening experience for anyone.", specs:"5"}, 
+	{title: "LG G3", description: "LG G3's unique power and volume rocker placement stands them out from the crowd of cookie cutter style phones. Along side great specs, this phone is a great phone to have.", specs:"5.5"} 
+];
+
+
+var jsonList = [
+
+	"races": 
+		{title: "rogue", description: "the rogue"},
+		{title: "mage", description: "the mage"},
+		{title: "pally", description: "the pally"},
+	"classes":
+		{title: "be", description: "the bbb"},
+		{title: "tarr", description: "the ttt"},
+		{title: "druid", description: "the ddd"},
+];
+
+// Data created and separated from JSON Data to use in rows and desc. page
+
+for (var i=0, j=jsonList.races.length; i<j; i++) {
+	var raceRow = Ti.UI.createTableViewRow({
+		title: jsonList.races[i].title,
+		desc: jsonList.races[i].description,
+		//specs: "Screen Size: " + androidList[i].specs + " inches.",
+		hasChild: true
+	});
+	androidSection.add(androidRow);
+	androidRow.addEventListener("click", myDetails);
+}
+
+for (var i=0, j=jsonList.classes.length; i<j; i++) {
+	var classesRow = Ti.UI.createTableViewRow({
+		title: jsonList.classes[i].title,
+		desc: iphoneList[i].description,
+		//specs: "Screen Size: " + iphoneList[i].specs + " inches.",
+		hasChild: true
+	});
+	
+	iphoneSection.add(iphoneRow);
+	iphoneRow.addEventListener("click", myDetails);
+}
+
+
+
+var phoneSections = [androidSection, iphoneSection];
+
+currentWindow.setData(phoneSections);
+
+
+

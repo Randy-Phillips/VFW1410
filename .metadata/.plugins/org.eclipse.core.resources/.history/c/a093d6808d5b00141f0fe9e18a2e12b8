@@ -1,0 +1,6 @@
+alert("working");
+
+var createText = Ti.UI.createLabel({
+	color: "fff",
+	font: {fontSize: 16}
+});

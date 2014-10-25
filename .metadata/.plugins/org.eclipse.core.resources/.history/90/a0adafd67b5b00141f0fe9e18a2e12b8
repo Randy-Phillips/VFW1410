@@ -1,0 +1,62 @@
+
+Titanium.UI.setBackgroundColor('#000');
+
+
+// Main Window
+
+
+var mainWin = Titanium.UI.createWindow({  
+    title: "Main Application",
+    backgroundColor:"#fff"
+    
+});
+
+var classView = Titanium.UI.createLabel({
+	color:"black",
+	text:"Randy Phillips | Visual Frameworks 1410",
+	font:{fontSize:14,fontFamily:"Helvetica Neue"},
+	textAlign: "center",
+	left:0,
+	right: 0
+});
+
+var topName = Ti.UI.createView ({
+	backgroundColor: "ADADAD",
+	border: 1,
+	borderRadius: 2,
+	height: 50,
+	bottom: 10,
+	right: 10,
+	zIndex: 3,
+});
+
+var mainView = Ti.UI.createView ({
+	backgroundColor: "black",
+	borderColor: "black",
+	border: 1,
+	top: 20,
+	left: 0,
+	right: 0,
+	bottom: 0,
+	zIndex: 2,
+});
+
+var backView = Ti.UI.createView ({
+	backgroundColor: "ffffff",
+	top: 0,
+	left: 0,
+	right: 0,
+	bottom: 0,
+	zIndex: 1,
+});
+
+
+//var loadFile = require('content');
+
+
+
+topName.add(classView);
+mainWin.add(mainView,topName,backView);
+mainWin.open();
+
+

@@ -1,0 +1,19 @@
+// Navigation Window Created
+
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+myNav.open();
+
+
+var openGallery = function(){
+	var galleryWindow = Ti.UI.createWindow({
+		backgroundColor: "33ccff",
+		url: "gallery.js"
+		
+	});
+	myNav.open(galleryWindow);
+};
+
+galleryView.addEventListener("click", openGallery);

@@ -1,0 +1,34 @@
+//alert("gallery");
+
+var currentWindow = Ti.UI.currentWindow;
+
+var imageBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:150,
+	right:15,
+	left: 15,
+	bottom:80
+	
+});
+
+var prevBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:20,
+	right:150,
+	left: 15,
+	height:115
+	
+});
+
+var randomButton = Ti.UI.createView({
+	backgroundColor: "303030",
+	left: 15,
+	height: 40,
+	width: 140,
+	bottom: 10
+	
+});
+
+currentWindow.add(imageBlock, prevBlock, randomBUtton);
+
+

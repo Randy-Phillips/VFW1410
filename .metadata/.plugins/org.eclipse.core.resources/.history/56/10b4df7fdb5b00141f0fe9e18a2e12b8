@@ -1,0 +1,3 @@
+alert("data");
+
+var currentWindow = Ti.UI.currentWindow;

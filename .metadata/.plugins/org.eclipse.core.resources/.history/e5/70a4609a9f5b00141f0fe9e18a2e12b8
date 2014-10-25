@@ -1,0 +1,88 @@
+//alert("gallery");
+
+// vars
+var imageFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imageFolder.getDirectoryListing();
+var lastIndex = imageFiles.length-1;
+
+// backdrop views
+
+var currentWindow = Ti.UI.currentWindow;
+
+var imageBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:150,
+	right:15,
+	left: 15,
+	bottom:80
+	
+});
+
+var prevBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:20,
+	right:160,
+	left: 15,
+	height:80
+	
+});
+
+var randomButton = Ti.UI.createView({
+	backgroundColor: "303030",
+	border: 3,
+	borderColor: "453991",
+	height: 50,
+	width: 140,
+	bottom: 10
+	
+});
+
+var buttonLabel = Titanium.UI.createLabel({
+	color:"fff",
+	text:"Random Image",
+	font:{fontSize:14,fontFamily:"Helvetica Neue"},
+	textAlign: "center",
+	width: "auto"
+});
+
+//  IMAGE CREATION
+
+var i = Math.floor(Math.random()*(lastIndex + 1));;
+var prevNumber = "blankimg";
+
+var mainImage = Ti.UI.createImageView({
+		image: "images/" + imageFiles[i] ,
+		width: imageBlock.width,
+		//zIndex: 200,
+		
+	});
+
+var prevImage = Ti.UI.createImageView({
+		image: "images/" + imageFiles[prevImage] ,
+		width: prevBlock.width,
+		//zIndex: 200,
+		
+	});
+
+var createRandom = function(){
+	var currentNumber = i;
+	var randomNumber = Math.floor(Math.random()*(lastIndex + 1));
+	
+	while (currentNumber === randomNumber){
+		randomNumber = Math.floor(Math.random()*(lastIndex + 1));
+	};
+	prevNumber = i;	
+	i = randomNumber;
+	mainImage.image = "images/" + imageFiles[i];
+	prevImage.image = "images/"	+ imageFiles[prevNumber];
+	
+};
+
+
+randomButton.addEventListener("click", createRandom);
+imageBlock.add(mainImage);
+prevBlock.add(prevImage);
+randomButton.add(buttonLabel);
+currentWindow.add(imageBlock, prevBlock, randomButton);
+
+

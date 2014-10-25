@@ -1,0 +1,66 @@
+//alert("data");
+
+var currentWindow = Ti.UI.currentWindow;
+
+
+
+var jsonList = 
+
+	{"races": [
+		{title: "rogue", description: "the rogue"},
+		{title: "mage", description: "the mage"},
+		{title: "pally", description: "the pally"} ],
+	"classes" [
+		{title: "be", description: "the bbb"},
+		{title: "tarr", description: "the ttt"},
+		{title: "druid", description: "the ddd"} ]
+	};
+
+
+
+
+var classesSection = Ti.UI.createTableViewSection ({
+	headerTitle: "races",
+	footerTitle: "Latest Android Phones",
+});
+
+var racesSection = Ti.UI.createTableViewSection ({
+	headerTitle: "classes",
+	footerTitle: "Latest iPhones",
+});
+
+
+
+// Data created and separated from JSON Data to use in rows and desc. page
+
+for (var i=0, j=jsonList.races.length; i<j; i++) {
+	var raceRow = Ti.UI.createTableViewRow({
+		title: jsonList.races[i].title,
+		desc: jsonList.races[i].description,
+		//specs: "Screen Size: " + androidList[i].specs + " inches.",
+		hasChild: true
+	});
+	raceSection.add(racedRow);
+	raceRow.addEventListener("click", myDetails);
+}
+
+for (var i=0, j=jsonList.classes.length; i<j; i++) {
+	var classesRow = Ti.UI.createTableViewRow({
+		title: jsonList.classes[i].title,
+		desc: iphoneList[i].description,
+		//specs: "Screen Size: " + iphoneList[i].specs + " inches.",
+		hasChild: true
+	});
+	
+	classesSection.add(classesRow);
+	classesRow.addEventListener("click", myDetails);
+}
+
+
+
+var jsonSections = [classesSection, racesSection];
+
+currentWindow.setData(phoneSections);
+
+
+

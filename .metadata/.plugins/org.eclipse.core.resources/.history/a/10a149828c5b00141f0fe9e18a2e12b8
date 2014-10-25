@@ -1,0 +1,7 @@
+// Navigation Window Created
+
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+myNav.open();

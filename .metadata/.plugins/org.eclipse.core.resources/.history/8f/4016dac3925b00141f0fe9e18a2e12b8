@@ -1,0 +1,73 @@
+//alert("gallery");
+
+// vars
+
+var imageFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imageFolder.getDirectoryListing();
+
+// backdrop views
+
+var currentWindow = Ti.UI.currentWindow;
+
+var imageBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:150,
+	right:15,
+	left: 15,
+	bottom:80
+	
+});
+
+var prevBlock = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:20,
+	right:150,
+	left: 15,
+	height:115
+	
+});
+
+var randomButton = Ti.UI.createView({
+	backgroundColor: "303030",
+	border: 3,
+	borderColor: "453991",
+	height: 50,
+	width: 140,
+	bottom: 10
+	
+});
+
+var buttonLabel = Titanium.UI.createLabel({
+	color:"fff",
+	text:"Random Image",
+	font:{fontSize:14,fontFamily:"Helvetica Neue"},
+	textAlign: "center",
+	width: "auto"
+});
+
+//  IMAGE CREATION
+
+var currentImage = "1289368.jpg";
+
+var mainImage = Ti.UI.createImageView({
+		image: "images/" + currentImage,
+		title: currentImage,
+		desc: currentImage,
+		width: imageBlock.width,
+		top: 0
+	});
+
+/*var createRandom = function(){
+
+
+var CurrentImage = 
+	if () {
+		
+	};
+};
+*/
+imageBlock.add(mainImage);
+randomButton.add(buttonLabel);
+currentWindow.add(imageBlock, prevBlock, randomButton);
+
+

@@ -1,0 +1,16 @@
+//alert("gallery");
+
+var currentWindow = Ti.UI.currentWindow;
+
+var backDrop = Ti.UI.createView({
+	backgroundColor: "fff",
+	top:15,
+	right:15,
+	left: 15,
+	bottom:10
+	
+});
+
+currentWindow.add(backDrop);
+
+
