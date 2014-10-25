@@ -1,0 +1,47 @@
+alert("custom");
+
+var currentWindow = Ti.UI.currentWindow;
+
+
+var imageFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imageFolder.getDirectoryListing();
+var lastIndex = imageFiles.length-1;
+
+var slider = Titanium.UI.createSlider({
+    bottom: 50,
+    min: 0,
+    max: 100,
+    width: '90%',
+    value: 50
+    });
+    
+var label = Ti.UI.createLabel({
+    text: slider.value,
+    width: '100%',
+    height: 'auto',
+    top: 30,
+    left: 0,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+    });
+
+slider.addEventListener('change', function(e) {
+    label.text = String.format("%3.1f", e.value);
+});
+
+var newView = Ti.UI.createView({
+	backgroundColor: "transparent"
+
+	
+});
+
+var imageView = Ti.UI.createView({
+	backgroundColor: "303030",
+	top:150,
+	right:15,
+	left: 15,
+	bottom:80
+	
+});
+
+newView.add(slider, label);
+currentWindow.add(newView);

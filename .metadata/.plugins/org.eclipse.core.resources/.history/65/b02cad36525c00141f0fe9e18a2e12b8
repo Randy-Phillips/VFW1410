@@ -1,0 +1,132 @@
+// Navigation Window Created
+
+
+
+
+
+
+// Open Gallery Window
+
+var openGallery = function(){
+	var galleryWindow = Ti.UI.createWindow({
+		title: "Gallery Window",
+		backgroundColor: "786DBD",
+		url: "gallery.js"
+		
+	});
+	myNav.openWindow(galleryWindow);
+};
+
+galleryView.addEventListener("click", openGallery);
+
+// Open Data Window
+
+var openData = function(){
+	var dataWindow = Ti.UI.createWindow({
+		title: "Data Window",
+		backgroundColor: "E83F3F",
+		url: "datapage.js"
+		
+	});
+	
+	// Detail Window created
+
+var myDetails = function(){
+	
+
+	var detailWindow = Ti.UI.createWindow({
+		title: this.title,
+		backgroundColor: "f5f5f5"
+		
+	});
+	
+	var newNav = Ti.UI.iOS.createNavigationWindow({
+		window: detailWindow
+	});
+	
+	var detailLabel = Titanium.UI.createLabel({
+		color:"525252",
+		text:this.title,
+		font:{fontSize:20,fontFamily:"Helvetica Neue"},
+		textAlign: "center",
+		width: "auto"
+	});
+	
+	var detailTopName = Ti.UI.createView ({
+		backgroundColor: "#C4C4C4",
+		top: 2});
+	
+	var detailView = Ti.UI.createView ({
+		backgroundColor: "E3E6E4",
+		top: 20,
+		right: 10,
+		left: 10,
+		bottom: 10,
+		zIndex: 1
+});
+
+var detailText = Ti.UI.createLabel({
+	text: this.desc,
+	font:{fontSize:16,fontFamily:"Arial"},
+	top: detailTopName.height + detailTopName.top + 40,	
+	left: 10,
+	right: 10,
+	zIndex: 10
+});	
+
+var specText = Ti.UI.createLabel({
+	text: this.specs,
+	font:{fontSize:16,fontFamily:"Arial"},
+	top: detailText.top + 170,
+	left: 10,
+	right: 10,
+	zIndex: 10
+});	
+
+var closeButton = Ti.UI.createLabel({
+	text: "Go Back",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	font:{fontSize:12,fontFamily:"Arial"},
+	width: "100%",
+	bottom: 0,
+	textAlign: "center",
+	zIndex: 8
+});
+
+var closeWindow = function() {
+	detailWindow.close();
+};
+
+
+closeButton.addEventListener("click", closeWindow);
+
+detailTopName.add(detailLabel);
+detailWindow.add(detailView,detailTopName,detailText,specText, closeButton);
+
+myNav.openWindow(detailWindow);
+
+};
+
+	
+	myNav.openWindow(dataWindow);
+};
+
+dataView.addEventListener("click", openData);
+
+// Open Custom Window
+
+var openCustom = function(){
+	var customWindow = Ti.UI.createWindow({
+		title: "Custom Window",
+		backgroundColor: "E68B4E",
+		url: "custompage.js"
+		
+	});
+	myNav.openWindow(customWindow);
+};
+
+customView.addEventListener("click", openCustom);
+
+

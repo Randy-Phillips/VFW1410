@@ -1,6 +1,9 @@
 
 Titanium.UI.setBackgroundColor('#000');
 
+
+
+
 var pWidth = Ti.Platform.displayCaps.platformWidth;
 var boxWidth = ( pWidth / 3 ) - 15;
 // Main Window
@@ -69,7 +72,7 @@ var galleryView = Ti.UI.createView ({
 
 var galleryLabel = Titanium.UI.createLabel({
 	color:"331700",
-	text:"Gallery",
+	text:"Random Image",
 	font:{fontSize:16,fontFamily:"Helvetica Neue", fontWeight: "bold"},
 	textAlign: "center",
 	width: "auto"
@@ -88,7 +91,7 @@ var dataView = Ti.UI.createView ({
 
 var dataLabel = Titanium.UI.createLabel({
 	color:"331700",
-	text:"Data",
+	text:"Class Details",
 	font:{fontSize:16,fontFamily:"Helvetica Neue", fontWeight: "bold"},
 	textAlign: "center",
 	width: "auto"
@@ -107,16 +110,22 @@ var customView = Ti.UI.createView ({
 
 var customLabel = Titanium.UI.createLabel({
 	color:"331700",
-	text:"Custom",
+	text:"Image Slider",
 	font:{fontSize:16,fontFamily:"Helvetica Neue", fontWeight: "bold"},
 	textAlign: "center",
 	width: "auto"
 });
 
 
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+myNav.open();
+
+
 var loadFile = require('content');
 
-		
 galleryView.add(galleryLabel);
 dataView.add(dataLabel);
 customView.add(customLabel);

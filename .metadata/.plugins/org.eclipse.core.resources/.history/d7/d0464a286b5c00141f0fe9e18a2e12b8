@@ -1,0 +1,32 @@
+alert("custom");
+
+var currentWindow = Ti.UI.currentWindow;
+
+var slider = Titanium.UI.createSlider({
+    top: 50,
+    min: 0,
+    max: 100,
+    width: '100%',
+    value: 50
+    });
+    
+var label = Ti.UI.createLabel({
+    text: slider.value,
+    width: '100%',
+    height: 'auto',
+    top: 30,
+    left: 0,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+    });
+
+slider.addEventListener('change', function(e) {
+    label.text = String.format("%3.1f", e.value);
+});
+
+var newView = Ti.UI.createView({
+	backgroundColor: "transparent"
+	
+});
+
+newView.add(slider, label);
+currentWindow.add(newView);
